@@ -84,11 +84,12 @@
                     <div class="code">
                         <p class="comment">&lt;!-- ... existing HTML ... --&gt;</p>
                         <div class="backColor">
-                            <span class="syntax">&lt;</span> <span class="div">div</span>
+                            <span class="syntax">&lt;</span> <span class="div left5">div</span>
                             <span class="idColor">id</span>
-                            <span class="idName"> ="like_button_container"</span>
-                            <span class="syntax">&gt;&lt;/</span> <span class="div">div</span>
-                            <span class="syntax">&gt;</span>
+                            <span class="idName left5"> ="like_button_container"</span>
+                            <span class="syntax left5">&gt;&lt;/</span>
+                            <span class="div left5">div</span>
+                            <span class="syntax left5">&gt;</span>
                         </div>
                         <p class="comment">&lt;!-- ... existing HTML ... --&gt;</p>
                     </div>
@@ -402,6 +403,7 @@
                                 <span class="idName left5">&lt;/</span>
                                 <span class="div left5">h1</span>
                                 <span class="idName left5">&gt;</span>
+                                <span class="idName left5">;</span>
                             </p>
                         </div>
                     </div>
@@ -492,15 +494,143 @@
                             </p>
                         </div>
                     </div>
+                    <p>
+                        You can put any valid
+                        <span class="adding linkHover fontStyle">JavaScript expression</span> inside
+                        the curly braces in JSX. For example, <span class="highlight">2 + 2</span>,
+                        <span class="highlight">user.firstName</span>, or
+                        <span class="highlight">formatName(user)</span> are all valid JavaScript
+                        expressions.
+                    </p>
                 </div>
+                <div id="rendering">
+                    <h1>Rendering Elements</h1>
+                    <div class="res">Elements are the smallest building blocks of React apps.</div>
+                </div>
+                <p>An element describes what you want to see on the screen:</p>
+                <div class="code">
+                    <div class="codePadding">
+                        <p style="margin: 0">
+                            <span class="idColor">const</span>
+                            <span style="color:white">element = </span>
+                            <span class="idName">&lt;</span>
+                            <span class="div left5">h1</span>
+                            <span class="idName left5">&gt;</span>
+                            <span style="color:white" class="left5">Hello, world!</span>
+                            <span class="idName left5">&lt;/</span>
+                            <span class="div left5">h1</span>
+                            <span class="idName left5">&gt;</span>
+                            <span class="idName left5">;</span>
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    Unlike browser DOM elements, React elements are plain objects, and are cheap to
+                    create. React DOM takes care of updating the DOM to match the React elements.
+                </p>
+                <div class="tip">
+                    <h3>Note</h3>
+                    <p>
+                        One might confuse elements with a more widely known concept of “components”.
+                        We will introduce components in the
+                        <span class="adding linkHover fontStyle">next section</span>. Elements are
+                        what components are “made of”, and we encourage you to read this section
+                        before jumping ahead.
+                    </p>
+                </div>
+
+                <h3>Rendering an Element into the DOM</h3>
+                <p>
+                    Let’s say there is a <span class="highlight">&lt;div&gt;</span> somewhere in
+                    your HTML file:
+                </p>
+                <div class="code">
+                    <div class="codePadding">
+                        <span class="syntax">&lt;</span> <span class="div left5">div</span>
+                        <span class="idColor">id</span>
+                        <span class="idName left5"> ="root"</span>
+                        <span class="syntax left5">&gt;&lt;/</span>
+                        <span class="div left5">div</span>
+                        <span class="syntax left5">&gt;</span>
+                    </div>
+                </div>
+                <p>
+                    We call this a “root” DOM node because everything inside it will be managed by
+                    React DOM.
+                </p>
+                <p>
+                    Applications built with just React usually have a single root DOM node. If you
+                    are integrating React into an existing app, you may have as many isolated root
+                    DOM nodes as you like.
+                </p>
+                <p>
+                    To render a React element into a root DOM node, pass both to
+                    <span class="highlight">ReactDOM.render()</span>:
+                </p>
+                <div class="code" style="margin-bottom: 25px">
+                    <div class="codePadding">
+                        <p style="margin: 0">
+                            <span class="idColor">const</span>
+                            <span style="color:white">element = </span>
+                            <span class="idName">&lt;</span>
+                            <span class="div left5">h1</span>
+                            <span class="idName left5">&gt;</span>
+                            <span style="color:white" class="left5">Hello, world!</span>
+                            <span class="idName left5">&lt;/</span>
+                            <span class="div left5">h1</span>
+                            <span class="idName left5">&gt;</span>
+                            <span class="idName left5">;</span>
+                        </p>
+
+                        <p style="margin: 0">
+                            <span style="color:white">ReactDOM</span
+                            ><span class="func">.render</span><span class="idName">(</span>
+                            <span class="left5" style="color:white">element</span>
+                            <span class="idName left5">,</span>
+                            <span style="color: white">document</span>
+                            <span class="func left5">.getElementById</span>
+                            <span class="idName left5">('root')</span>
+                            <span class="idName left5">);</span>
+                        </p>
+                    </div>
+                </div>
+                <h4 class="adding linkHover fontStyle" style="display: inline;">
+                    Try it on CodePen
+                </h4>
+
+                <p>It displays "Hello, world" on the page.</p>
+
+                <h3>React Only Updates What's Necessary</h3>
+                <p>
+                    React DOM compares the element and its children to the previous one, and only
+                    applies the DOM updates necessary to bring the DOM to the desired state.
+                </p>
+
+                <p>
+                    You can verify by inspecting the
+                    <span class="adding linkHover fontStyle">last example</span> with the browser
+                    tools:
+                </p>
+                <img
+                    src="../assets/img/granular-dom-updates-c158617ed7cc0eac8f58330e49e48224.gif"
+                    alt=""
+                />
+                <p>
+                    Even though we create an element describing the whole UI tree on every tick,
+                    only the text node whose contents has changed gets updated by React DOM.
+                </p>
+                <p>
+                    In our experience, thinking about how the UI should look at any given moment
+                    rather than how to change it over time eliminates a whole class of bugs.
+                </p>
             </div>
-            <div id="navbar"">
+            <div id="navbar">
                 <div class="navItem" id="installation">
                     <ul>
                         <li class="title">INSTALLATION</li>
                     </ul>
                     <div id="installationU">
-                        <ul>
+                        <ol>
                             <a href="#gettingStarted">
                                 <li>Getting Started</li>
                             </a>
@@ -513,7 +643,7 @@
                             <a href="#CDNLinks">
                                 <li>CDN Links</li>
                             </a>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
                 <div class="navItem" id="mainConcepts">
@@ -521,13 +651,44 @@
                         <li class="title">MAIN CONCEPTS</li>
                     </ul>
                     <div id="mainConceptsU">
-                        <ul>
+                        <ol>
                             <a href="#helloWorld">
                                 <li>Hello World</li>
                             </a>
-                            <li>Create a new React App</li>
-                            <li>CDN Links</li>
-                        </ul>
+                            <a href="#JSX">
+                                <li>Introducing JSX</li>
+                            </a>
+                            <a href="#rendering">
+                                <li>Rendering Elements</li>
+                            </a>
+                            <a href="">
+                                <li>Components and Props</li>
+                            </a>
+                            <a href="">
+                                <li>State and Lifecycle</li>
+                            </a>
+                            <a href="">
+                                <li>Handling Events</li>
+                            </a>
+                            <a href="">
+                                <li>Conditional Rendering</li>
+                            </a>
+                            <a href="">
+                                <li>Lists and Keys</li>
+                            </a>
+                            <a href="">
+                                <li>Forms</li>
+                            </a>
+                            <a href="">
+                                <li>Lifting State Up</li>
+                            </a>
+                            <a href="">
+                                <li>Composition vs Inheritance</li>
+                            </a>
+                            <a href="">
+                                <li>Thinking in React</li>
+                            </a>
+                        </ol>
                     </div>
                 </div>
                 <div class="navItem" id="advancedGuides">
@@ -535,11 +696,11 @@
                         <li class="title">ADVANCED GUIDES</li>
                     </ul>
                     <div id="mainConceptsU">
-                        <ul>
+                        <ol>
                             <li>Add React to a Website</li>
                             <li>Create a new React App</li>
                             <li>CDN Links</li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
                 <div class="navItem" id="APIreference">
@@ -547,11 +708,11 @@
                         <li class="title">API REFERENCE</li>
                     </ul>
                     <div id="mainConceptsU">
-                        <ul>
+                        <ol>
                             <li>Add React to a Website</li>
                             <li>Create a new React App</li>
                             <li>CDN Links</li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
                 <div class="navItem" id="hooks">
@@ -559,11 +720,11 @@
                         <li class="title">HOOKS (NEW)</li>
                     </ul>
                     <div id="mainConceptsU">
-                        <ul>
+                        <ol>
                             <li>Add React to a Website</li>
                             <li>Create a new React App</li>
                             <li>CDN Links</li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
                 <div class="navItem" id="contributing">
@@ -571,11 +732,11 @@
                         <li class="title">CONTRIBUTING</li>
                     </ul>
                     <div id="mainConceptsU">
-                        <ul>
+                        <ol>
                             <li>Add React to a Website</li>
                             <li>Create a new React App</li>
                             <li>CDN Links</li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
                 <div class="navItem" id="FAQ">
@@ -583,11 +744,11 @@
                         <li class="title">FAQ</li>
                     </ul>
                     <div id="mainConceptsU">
-                        <ul>
+                        <ol>
                             <li>Add React to a Website</li>
                             <li>Create a new React App</li>
                             <li>CDN Links</li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
             </div>
