@@ -180,8 +180,321 @@
                         </p>
                     </div>
                 </div>
+                <div id="CDNLinks">
+                    <h1>CDN Links</h1>
+                    <p class="res">
+                        Both React and ReactDOM are available over a CDN.
+                    </p>
+                    <div class="code" style="padding: 20px">
+                        <div style="margin-bottom: 10px">
+                            <span class="syntax">&lt;</span><span class="div">script </span>
+                            <span class="idColor">crossorigin src</span
+                            ><span class="syntax">="</span>
+                            <span class="idName"
+                                >https://unpkg.com/react@16/umd/react.development.js</span
+                            >
+                            <span class="syntax">&gt;&lt;/</span>
+                            <span class="div">script</span>
+                            <span class="syntax">&gt;</span>
+                        </div>
+                        <div>
+                            <span class="syntax">&lt;</span><span class="div">script </span>
+                            <span class="idColor">crossorigin src</span
+                            ><span class="syntax">="</span>
+                            <span class="idName"
+                                >https://unpkg.com/react-dom@16/umd/react-dom.development.js</span
+                            >
+                            <span class="syntax">&gt;&lt;/</span>
+                            <span class="div">script</span>
+                            <span class="syntax">&gt;</span>
+                        </div>
+                    </div>
+                    <p>
+                        The versions above are only meant for development, and are not suitable for
+                        production. Minified and optimized production versions of React are
+                        available at:
+                    </p>
+                    <div class="code" style="padding: 20px">
+                        <div style="margin-bottom: 10px">
+                            <span class="syntax">&lt;</span><span class="div">script </span>
+                            <span class="idColor">crossorigin src</span
+                            ><span class="syntax">="</span>
+                            <span class="idName"
+                                >https://unpkg.com/react@16/umd/react.production.min.js</span
+                            >
+                            <span class="syntax">"</span>
+                            <span class="syntax">&gt;&lt;/</span>
+                            <span class="div">script</span>
+                            <span class="syntax">&gt;</span>
+                        </div>
+                        <div>
+                            <span class="syntax">&lt;</span><span class="div">script </span>
+                            <span class="idColor">crossorigin src</span
+                            ><span class="syntax">="</span>
+                            <span class="idName"
+                                >https://unpkg.com/react-dom@16/umd/react-dom.production.min.js</span
+                            >
+                            <span class="syntax">"</span>
+                            <span class="syntax">&gt;&lt;/</span>
+                            <span class="div">script</span>
+                            <span class="syntax">&gt;</span>
+                        </div>
+                    </div>
+                    <p>
+                        To load a specific version of <span class="highlight">react</span> and
+                        <span class="highlight">react-dom</span>, replace
+                        <span class="highlight">16</span> with the version number.
+                    </p>
+
+                    <h2>Why the <span id="crossorigin">crossorigin</span> Attribute?</h2>
+                    <p>
+                        If you serve React from a CDN, we recommend to keep the
+                        <a
+                            class="linkHover"
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes"
+                        >
+                            <span class="adding">crossorigin</span>
+                        </a>
+                        attribute set:
+                    </p>
+                    <div class="code" style="padding: 20px">
+                        <div style="margin-bottom: 10px">
+                            <span class="syntax">&lt;</span><span class="div">script </span>
+                            <span class="idColor">crossorigin src</span
+                            ><span class="syntax">="</span>
+                            <span class="idName">...</span>
+                            <span class="syntax">"</span>
+                            <span class="syntax">&gt;&lt;/</span>
+                            <span class="div">script</span>
+                            <span class="syntax">&gt;</span>
+                        </div>
+                    </div>
+                    <p>
+                        We also recommend to verify that the CDN you are using sets the
+                        <span class="highlight">Access-Control-Allow-Origin: *</span> HTTP header:
+                    </p>
+                    <div style="text-align: center">
+                        <img
+                            src="../assets/img/cdn-cors-header-89baed0a6540f29e954065ce04661048-dd807.png"
+                            alt=""
+                        />
+                    </div>
+                    <p>
+                        This enables a better
+                        <span class="linkHover adding">error handling experience</span>
+                    </p>
+                </div>
+                <div id="helloWorld">
+                    <h1>
+                        Hello World
+                    </h1>
+                    <p class="res">
+                        The smallest React example looks like this:
+                    </p>
+                    <div class="code">
+                        <div class="codePadding">
+                            <p style="margin: 0">
+                                <span style="color:white">ReactDOM</span
+                                ><span class="func">.render</span><span class="idName">(</span>
+                            </p>
+                            <p class="mgRight">
+                                <span class="idName">&lt;</span><span class="div">h1</span
+                                ><span class="idName">&gt;</span
+                                ><span style="color:white">Hello, world!</span>
+                                <span class="idName left5">&lt;/</span>
+                                <span class="div left5">h1</span>
+                                <span class="idName left5">&gt;,</span>
+                            </p>
+                            <p class="mgRight">
+                                <span style="color: white">document</span>
+                                <span class="func left5">.getElementById</span>
+                                <span class="idName left5">('root')</span>
+                            </p>
+                            <p style="margin: 0">
+                                <span class="idName left5">);</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        It displays a heading saying "Hello, world!" on the page.
+                    </p>
+                    <h4 class="adding linkHover fontStyle" style="display: inline">
+                        Try it on CodePen
+                    </h4>
+                    <p>
+                        Click the link above to open an online editor. Feel free to make some
+                        changes, and see how they affect the output. Most pages in this guide will
+                        have editable examples like this one.
+                    </p>
+
+                    <h3>How to Read This Guide</h3>
+                    <p>
+                        In this guide, we will examine the building blocks of React apps: elements
+                        and components. Once you master them, you can create complex apps from small
+                        reusable pieces.
+                    </p>
+                    <div class="tip">
+                        <h3>Tip</h3>
+                        <p>
+                            This guide is designed for people who prefer
+                            <b>learning concepts step by step.</b> If you prefer to learn by doing,
+                            check out our
+                            <span class="adding linkHover fontStyle">practical tutorial</span>. You
+                            might find this guide and the tutorial complementary to each other.
+                        </p>
+                    </div>
+                    <p>
+                        This is the first chapter in a step-by-step guide about main React concepts.
+                        You can find a list of all its chapters in the navigation sidebar. If you’re
+                        reading this from a mobile device, you can access the navigation by pressing
+                        the button in the bottom right corner of your screen.
+                    </p>
+                    <p>
+                        Every chapter in this guide builds on the knowledge introduced in earlier
+                        chapters.
+                        <b
+                            >You can learn most of React by reading the “Main Concepts” guide
+                            chapters in the order they appear in the sidebar.</b
+                        >
+                        For example,
+                        <span class="adding linkHover fontStyle">“Introducing JSX”</span> is the
+                        next chapter after this one.
+                    </p>
+                    <h3>Knowledge Level Assumptions</h3>
+                    <p>
+                        React is a JavaScript library, and so we’ll assume you have a basic
+                        understanding of the JavaScript language.
+                        <b
+                            >If you don’t feel very confident, we recommend
+                            <span class="adding linkHover fontStyle"
+                                >going through a JavaScript tutorial</span
+                            >
+                            to check your knowledge level
+                        </b>
+                        and enable you to follow along this guide without getting lost. It might
+                        take you between 30 minutes and an hour, but as a result you won’t have to
+                        feel like you’re learning both React and JavaScript at the same time.
+                    </p>
+                    <div class="tip">
+                        <h3>Note</h3>
+                        <p>
+                            This guide occasionally uses some of the newer JavaScript syntax in the
+                            examples. If you haven’t worked with JavaScript in the last few years,
+                            <span class="adding linkHover fontStyle"> these three points </span>
+                            should get you most of the way.
+                        </p>
+                    </div>
+                </div>
+                <div id="JSX">
+                    <h1>Introducing JSX</h1>
+                    <p class="res">
+                        Consider this variable declaration:
+                    </p>
+                    <div class="code">
+                        <div class="codePadding">
+                            <p style="margin: 0">
+                                <span class="idColor">const</span>
+                                <span style="color:white">element = </span>
+                                <span class="idName">&lt;</span>
+                                <span class="div left5">h1</span>
+                                <span class="idName left5">&gt;</span>
+                                <span style="color:white" class="left5">Hello, world!</span>
+                                <span class="idName left5">&lt;/</span>
+                                <span class="div left5">h1</span>
+                                <span class="idName left5">&gt;</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p>This funny tag syntax is neither a string nor HTML.</p>
+                    <p>
+                        It is called JSX, and it is a syntax extension to JavaScript. We recommend
+                        using it with React to describe what the UI should look like. JSX may remind
+                        you of a template language, but it comes with the full power of JavaScript.
+                    </p>
+                    <p>
+                        JSX produces React “elements”. We will explore rendering them to the DOM in
+                        the <span class="adding linkHover fontStyle">next section</span>. Below, you
+                        can find the basics of JSX necessary to get you started.
+                    </p>
+                    <h3>Why JSX?</h3>
+                    <p>
+                        React embraces the fact that rendering logic is inherently coupled with
+                        other UI logic: how events are handled, how the state changes over time, and
+                        how the data is prepared for display.
+                    </p>
+                    <p>
+                        Instead of artificially separating <i>technologies</i> by putting markup and
+                        logic in separate files, React
+                        <span class="adding linkHover fontStyle">separates <i>concerns</i></span>
+                        with loosely coupled units called “components” that contain both. We will
+                        come back to components in a
+                        <span class="adding linkHover fontStyle">further section</span>, but if
+                        you’re not yet comfortable putting markup in JS,
+                        <span class="adding linkHover fontStyle">this talk</span> might convince you
+                        otherwise.
+                    </p>
+                    <p>
+                        React <span class="adding linkHover fontStyle">doesn’t require</span> using
+                        JSX, but most people find it helpful as a visual aid when working with UI
+                        inside the JavaScript code. It also allows React to show more useful error
+                        and warning messages.
+                    </p>
+                    <p>With that out of the way, let’s get started!</p>
+
+                    <h3>Embedding Expressions in JSX</h3>
+                    <p>
+                        In the example below, we declare a variable called
+                        <span class="highlight" style="font-family: monospace; padding: 3px"
+                            >name</span
+                        >
+                        and then use it inside JSX by wrapping it in curly braces:
+                    </p>
+                    <div class="code">
+                        <div class="codePadding">
+                            <div class="backColor">
+                                <p style="margin: 0">
+                                    <span class="idColor">const</span>
+                                    <span style="color:white">name = </span>
+                                    <span class="idName">'Josh Perez';</span>
+                                </p>
+                                <div style="margin-bottom: 25px; padding-bottom: 3px;">
+                                    <p style="margin: 0">
+                                        <span class="idColor">const</span>
+                                        <span style="color:white">element = </span>
+                                        <span class="idName">&lt;</span>
+                                        <span class="div left5">h1</span>
+                                        <span class="idName left5">&gt;</span>
+                                        <span style="color:white" class="left5">Hello, </span>
+                                        <span class="idName">{</span>
+                                        <span style="color:white" class="left5">name</span>
+                                        <span class="idName left5">}</span>
+                                        <span class="idName left5">&lt;/</span>
+                                        <span class="div left5">h1</span>
+                                        <span class="idName left5">&gt;</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p style="margin: 0">
+                                <span style="color:white">ReactDOM</span
+                                ><span class="func">.render</span><span class="idName">(</span>
+                            </p>
+                            <p class="mgRight">
+                                <span style="color:white">element</span>
+                                <span class="idName left5">,</span>
+                            </p>
+                            <p class="mgRight">
+                                <span style="color: white">document</span>
+                                <span class="func left5">.getElementById</span>
+                                <span class="idName left5">('root')</span>
+                            </p>
+                            <p style="margin: 0">
+                                <span class="idName left5">);</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="navbar">
+            <div id="navbar"">
                 <div class="navItem" id="installation">
                     <ul>
                         <li class="title">INSTALLATION</li>
@@ -194,21 +507,12 @@
                             <a href="#addReact">
                                 <li>Add React to a Website</li>
                             </a>
-                            <li>Create a new React App</li>
-                            <li>CDN Links</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="navItem" id="mainConcepts">
-                    <ul>
-                        <li class="title">MAIN CONCEPTS</li>
-                    </ul>
-                    <div id="mainConceptsU">
-                        <ul>
-                            <li>Add React to a Website</li>
-                            <li>Create a new React App</li>
-                            <li>CDN Links</li>
+                            <a href="#createReactApp">
+                                <li>Create a new React App</li>
+                            </a>
+                            <a href="#CDNLinks">
+                                <li>CDN Links</li>
+                            </a>
                         </ul>
                     </div>
                 </div>
@@ -218,8 +522,8 @@
                     </ul>
                     <div id="mainConceptsU">
                         <ul>
-                            <a href="">
-                                <li>Add React to a Website</li>
+                            <a href="#helloWorld">
+                                <li>Hello World</li>
                             </a>
                             <li>Create a new React App</li>
                             <li>CDN Links</li>

@@ -9,6 +9,10 @@ html {
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+    background-color: rgba(187, 239, 253, 0.2);
+}
+
 ul {
     /* padding: 0; */
     margin: 0;
@@ -22,6 +26,8 @@ ul {
 
 #navbar {
     /* width: 350px; */
+    margin-left: 10px;
+    background-color: rgba(187, 239, 253, 0.2) !important;
 }
 
 .title {
@@ -42,15 +48,30 @@ ul {
 }
 
 .highlight {
-    background: rgb(251, 233, 184);
+    background: rgba(255, 229, 100, 0.2);
 }
 
 .backColor {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .idName {
     color: #8dc891;
+}
+
+.left5 {
+    margin-left: -8px;
+}
+
+.mgRight {
+    padding: 0;
+    margin: 0;
+    margin-left: 30px;
+    color: red;
+}
+
+.codePadding {
+    padding: 15px;
 }
 
 .idColor {
@@ -73,20 +94,56 @@ ul {
 }
 
 .tip {
-    background-color: rgb(253, 243, 214);
+    background-color: rgba(255, 229, 100, 0.3);
     border-left: 5px solid orange;
     padding: 12px;
 }
 
-.navItem > ul{
+h1 {
+    font-size: 45px;
+}
+
+.func {
+    color: rgb(58, 134, 206);
+}
+
+.linkHover {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    padding: 2px;
+    border-bottom: 1px solid rgb(202, 198, 198);
+}
+
+.linkHover:hover {
+    background-color: rgba(187, 239, 253, 0.7);
+    border-bottom: 1px solid black;
+}
+
+.linkHover:visited {
+    color: black;
+}
+
+.fontStyle {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.navItem > ul {
     list-style: none;
     padding: 2px;
     border-bottom: 1px solid black;
-    background: rgba(187, 239, 253, 1);
+    /* background: rgb(136, 200, 218); */
+    font-weight: bold;
 }
 
-#FAQ > ul{
+#FAQ > ul {
     border-bottom: none;
+}
+
+#crossorigin {
+    font-family: monospace;
+    font-size: 24px;
 }
 
 #installationU,
