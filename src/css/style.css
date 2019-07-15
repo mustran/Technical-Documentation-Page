@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: rgba(175, 175, 177, 0.1);
+    background-color: rgba(189, 223, 243, 0.3);
 }
 
 ul {
@@ -33,7 +33,7 @@ a{
     /* width: 350px; */
     text-align: center;
     margin-left: 10px;
-    background-color: rgba(187, 239, 253, 0.2) !important;
+    background-color: rgba(22, 127, 141, 0.2) !important;
 }
 
 .title {
@@ -141,6 +141,11 @@ h1 {
     border-bottom: 1px solid black;
     /* background: rgb(136, 200, 218); */
     font-weight: bold;
+    cursor: pointer;
+}
+
+.navItem ul:hover {
+    background-color: rgba(13, 77, 97, 0.2);
 }
 
 #FAQ > ul {
@@ -152,17 +157,30 @@ h1 {
     font-size: 24px;
 }
 
-#installationU,
-#mainConceptsU {
+.hide{
     /* background: green; */
     display: none;
 }
 
 .show {
     display: block !important;
-    background: rgba(187, 239, 253, 0.7) !important;
+    /* background: rgba(158, 227, 235, 0.7) !important; */
     animation: fadeIn 1s;
+    color: white;
 }
+
+.show > ol > a{
+    /* color: white; */
+    /* font-weight: bold; */
+    font-size: 20px;
+}
+
+.show > ol > a:hover{
+    /* color: white; */
+    font-weight: bold;
+    /* font-size: 21px; */
+}
+
 
 @keyframes fadeIn {
     from {
@@ -179,6 +197,7 @@ h1 {
         display: flex;
         flex-direction: column-reverse;
         margin: 5px !important;
+        margin-right: 0;
     }
     #navbar {
         width: 100%;
