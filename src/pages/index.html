@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>Technical Documentation Page</title>
+    </head>
+    <body>
+        <div id="container" style="margin-left: 20%">
+            <div id="content">
+                <div id="gettingStarted">
+                    <h1>Getting Started</h1>
+                    <p class="res">
+                        This page is an overview of the React documentation and related resources.
+                    </p>
+                    <ul>
+                        <li>
+                            Try React
+                        </li>
+                        <li>
+                            Learn React
+                        </li>
+                        <li>
+                            Staying Informed
+                        </li>
+                        <li>
+                            Versioned Documentation
+                        </li>
+                        <li>
+                            Something Missing?
+                        </li>
+                    </ul>
+                    <h2>Try React</h2>
+                    <p>
+                        React has been designed from the start for gradual adoption, and you can use
+                        as little or as much React as you need. Whether you want to get a taste of
+                        React, add some interactivity to a simple HTML page, or start a complex
+                        React-powered app, the links in this section will help you get started.
+                    </p>
+                    <h3>Online Playgrounds</h3>
+                    <p>
+                        If you’re interested in playing around with React, you can use an online
+                        code playground. Try a Hello World template on CodePen, CodeSandbox, or
+                        Glitch. If you prefer to use your own text editor, you can also download
+                        this HTML file, edit it, and open it from the local filesystem in your
+                        browser. It does a slow runtime code transformation, so we’d only recommend
+                        using this for simple demos.
+                    </p>
+                </div>
+                <div id="addReact">
+                    <h1>Add React to a Website</h1>
+                    <p class="res">
+                        This page is an overview of the React documentation and related resources.
+                    </p>
+                    <p>
+                        React has been designed from the start for gradual adoption, and you can use
+                        as little or as much React as you need. Perhaps you only want to add some
+                        “sprinkles of interactivity” to an existing page. React components are a
+                        great way to do that. The majority of websites aren’t, and don’t need to be,
+                        single-page apps. With a few lines of code and no build tooling, try React
+                        in a small part of your website. You can then either gradually expand its
+                        presence, or keep it contained to a few dynamic widgets.
+                    </p>
+
+                    <h1>Add React in One Minute</h1>
+                    <p>
+                        Add React in One Minute In this section, we will show how to add a React
+                        component to an existing HTML page. You can follow along with your own
+                        website, or create an empty HTML file to practice. There will be no
+                        complicated tools or install requirements —
+                        <b
+                            >to complete this section, you only need an internet connection, and a
+                            minute of your time.</b
+                        >
+                    </p>
+
+                    <h3>Step 1: Add a DOM Container to the HTML</h3>
+                    <p>
+                        First, open the HTML page you want to edit. Add an empty &lt;div&gt; tag to
+                        mark the spot where you want to display something with React. For example:
+                    </p>
+                    <div class="code">
+                        <p class="comment">&lt;!-- ... existing HTML ... --&gt;</p>
+                        <div class="backColor">
+                            <span class="syntax">&lt;</span> <span class="div">div</span>
+                            <span class="idColor">id</span>
+                            <span class="idName"> ="like_button_container"</span>
+                            <span class="syntax">&gt;&lt;/</span> <span class="div">div</span>
+                            <span class="syntax">&gt;</span>
+                        </div>
+                        <p class="comment">&lt;!-- ... existing HTML ... --&gt;</p>
+                    </div>
+                    <p>
+                        We gave this <span class="highlight">&lt;div&gt;</span> a unique
+                        <span class="highlight">id</span> HTML attribute. This will allow us to find
+                        it from the JavaScript code later and display a React component inside of
+                        it.
+                    </p>
+                    <div class="tip">
+                        <h3>Tip</h3>
+                        <p>
+                            You can place a “container”
+                            <span class="highlight">&lt;div&gt;</span> like this
+                            <b>anywhere</b> inside the
+                            <span class="highlight">&lt;body&gt;</span> tag. You may have as many
+                            independent DOM containers on one page as you need. They are usually
+                            empty — React will replace any existing content inside DOM containers.
+                        </p>
+                    </div>
+                </div>
+                <div id="createReactApp">
+                    <h1>Create a New React App</h1>
+                    <p class="res">
+                        Use an integrated toolchain for the best user and developer experience.
+                    </p>
+                    <div>
+                        <p>
+                            This page describes a few popular React toolchains which help with tasks
+                            like:
+                        </p>
+                        <ul>
+                            <li>Scaling to many files and components.</li>
+                            <li>Using third-party libraries from npm.</li>
+                            <li>Detecting common mistakes early.</li>
+                            <li>Live-editing CSS and JS in development.</li>
+                            <li>Optimizing the output for production.</li>
+                        </ul>
+
+                        <p>
+                            The toolchains recommended on this page
+                            <strong>don’t require configuration to get started.</strong>
+                        </p>
+
+                        <h3>You Might Not Need a Toolchain</h3>
+                        <p>
+                            If you don’t experience the problems described above or don’t feel
+                            comfortable using JavaScript tools yet, consider
+                            <span class="adding"
+                                >adding React as a plain &lt;script&gt; tag on an HTML page</span
+                            >, optionally with <span class="adding">JSX</span>. <br />
+                            <br />
+                            This is also
+                            <b>the easiest way to integrate React into an existing website. </b>You
+                            can always add a larger toolchain if you find it helpful!
+                        </p>
+                    </div>
+
+                    <h3>Create React App</h3>
+                    <p>
+                        <span class="adding">Create React App</span> is a comfortable environment
+                        for <strong>learning React</strong>, and is the best way to start building
+                        <strong>a new <span class="adding">single-page</span> application</strong>
+                        in React.
+                    </p>
+                    <p>
+                        It sets up your development environment so that you can use the latest
+                        JavaScript features, provides a nice developer experience, and optimizes
+                        your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on
+                        your machine. To create a project, run:
+                    </p>
+                    <div class="code">
+                        <p style="color:white">npx create-react-app my-app</p>
+                        <p style="color:white">
+                            <span style="color: rgb(121, 182, 242);">cd</span> my-app
+                        </p>
+                        <p style="color:white">
+                            <span style="color: rgb(121,182,242);">npm</span> start
+                        </p>
+                    </div>
+                    <div class="tip" style="margin-top: 30px">
+                        <h3>Note</h3>
+                        <p>
+                            <span class="highlight">npx</span> on the first line is not a typo -
+                            it's a
+                            <span class="adding"
+                                >package runner tool that comes with npm 5.2+.</span
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="navbar">
+                <div class="navItem" id="installation">
+                    <ul>
+                        <li class="title">INSTALLATION</li>
+                    </ul>
+                    <div id="installationU">
+                        <ul>
+                            <a href="#gettingStarted">
+                                <li>Getting Started</li>
+                            </a>
+                            <a href="#addReact">
+                                <li>Add React to a Website</li>
+                            </a>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navItem" id="mainConcepts">
+                    <ul>
+                        <li class="title">MAIN CONCEPTS</li>
+                    </ul>
+                    <div id="mainConceptsU">
+                        <ul>
+                            <li>Add React to a Website</li>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navItem" id="mainConcepts">
+                    <ul>
+                        <li class="title">MAIN CONCEPTS</li>
+                    </ul>
+                    <div id="mainConceptsU">
+                        <ul>
+                            <a href="">
+                                <li>Add React to a Website</li>
+                            </a>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navItem" id="advancedGuides">
+                    <ul>
+                        <li class="title">ADVANCED GUIDES</li>
+                    </ul>
+                    <div id="mainConceptsU">
+                        <ul>
+                            <li>Add React to a Website</li>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navItem" id="APIreference">
+                    <ul>
+                        <li class="title">API REFERENCE</li>
+                    </ul>
+                    <div id="mainConceptsU">
+                        <ul>
+                            <li>Add React to a Website</li>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navItem" id="hooks">
+                    <ul>
+                        <li class="title">HOOKS (NEW)</li>
+                    </ul>
+                    <div id="mainConceptsU">
+                        <ul>
+                            <li>Add React to a Website</li>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navItem" id="contributing">
+                    <ul>
+                        <li class="title">CONTRIBUTING</li>
+                    </ul>
+                    <div id="mainConceptsU">
+                        <ul>
+                            <li>Add React to a Website</li>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navItem" id="FAQ">
+                    <ul>
+                        <li class="title">FAQ</li>
+                    </ul>
+                    <div id="mainConceptsU">
+                        <ul>
+                            <li>Add React to a Website</li>
+                            <li>Create a new React App</li>
+                            <li>CDN Links</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>

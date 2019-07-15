@@ -1,0 +1,124 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+ul {
+    /* padding: 0; */
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 3fr 1fr;
+}
+
+#navbar {
+    /* width: 350px; */
+}
+
+.title {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.res {
+    color: grey;
+}
+
+.div {
+    color: rgb(246, 107, 149);
+}
+
+.syntax {
+    color: rgb(25, 182, 182);
+}
+
+.highlight {
+    background: rgb(251, 233, 184);
+}
+
+.backColor {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.idName {
+    color: #8dc891;
+}
+
+.idColor {
+    color: rgb(171, 122, 235);
+}
+
+.code {
+    background: #282c34;
+    padding: 1px 10px 1px 10px;
+    border-radius: 10px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+
+.adding {
+    background-color: rgba(187, 239, 253, 0.3);
+}
+
+.comment {
+    color: #b2b2b2;
+}
+
+.tip {
+    background-color: rgb(253, 243, 214);
+    border-left: 5px solid orange;
+    padding: 12px;
+}
+
+.navItem > ul{
+    list-style: none;
+    padding: 2px;
+    border-bottom: 1px solid black;
+    background: rgba(187, 239, 253, 1);
+}
+
+#FAQ > ul{
+    border-bottom: none;
+}
+
+#installationU,
+#mainConceptsU {
+    /* background: green; */
+    display: none;
+}
+
+.show {
+    display: block !important;
+    background: rgba(187, 239, 253, 0.7) !important;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    #container {
+        /* grid-auto-flow: row; */
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 5px !important;
+    }
+    #navbar {
+        width: 100%;
+        text-align: center;
+    }
+}
