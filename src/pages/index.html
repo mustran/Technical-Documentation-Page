@@ -192,7 +192,7 @@
                             <span class="idColor">crossorigin src</span
                             ><span class="syntax">="</span>
                             <span class="idName left5"
-                            >https://unpkg.com/react@16/umd-react.development.js</span
+                                >https://unpkg.com/react@16/umd-react.development.js</span
                             >
                             <span class="syntax">&gt;&lt;/</span>
                             <span class="div left5">script</span>
@@ -221,7 +221,7 @@
                             <span class="idColor">crossorigin src</span
                             ><span class="syntax">="</span>
                             <span class="idName left5"
-                            >https://unpkg.com/react@16/umd-react.production.min.js</span
+                                >https://unpkg.com/react@16/umd-react.production.min.js</span
                             >
                             <span class="syntax left5">"</span>
                             <span class="syntax left5">&gt;&lt;/</span>
@@ -506,123 +506,348 @@
                 <div id="rendering">
                     <h1>Rendering Elements</h1>
                     <div class="res">Elements are the smallest building blocks of React apps.</div>
-                </div>
-                <p>An element describes what you want to see on the screen:</p>
-                <div class="code">
-                    <div class="codePadding">
-                        <p style="margin: 0">
-                            <span class="idColor">const</span>
-                            <span style="color:white">element = </span>
-                            <span class="idName">&lt;</span>
-                            <span class="div left5">h1</span>
-                            <span class="idName left5">&gt;</span>
-                            <span style="color:white" class="left5">Hello, world!</span>
-                            <span class="idName left5">&lt;/</span>
-                            <span class="div left5">h1</span>
-                            <span class="idName left5">&gt;</span>
-                            <span class="idName left5">;</span>
+
+                    <p>An element describes what you want to see on the screen:</p>
+                    <div class="code">
+                        <div class="codePadding">
+                            <p style="margin: 0">
+                                <span class="idColor">const</span>
+                                <span style="color:white">element = </span>
+                                <span class="idName">&lt;</span>
+                                <span class="div left5">h1</span>
+                                <span class="idName left5">&gt;</span>
+                                <span style="color:white" class="left5">Hello, world!</span>
+                                <span class="idName left5">&lt;/</span>
+                                <span class="div left5">h1</span>
+                                <span class="idName left5">&gt;</span>
+                                <span class="idName left5">;</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        Unlike browser DOM elements, React elements are plain objects, and are cheap
+                        to create. React DOM takes care of updating the DOM to match the React
+                        elements.
+                    </p>
+                    <div class="tip">
+                        <h3>Note</h3>
+                        <p>
+                            One might confuse elements with a more widely known concept of
+                            “components”. We will introduce components in the
+                            <span class="adding linkHover fontStyle">next section</span>. Elements
+                            are what components are “made of”, and we encourage you to read this
+                            section before jumping ahead.
                         </p>
                     </div>
-                </div>
-                <p>
-                    Unlike browser DOM elements, React elements are plain objects, and are cheap to
-                    create. React DOM takes care of updating the DOM to match the React elements.
-                </p>
-                <div class="tip">
-                    <h3>Note</h3>
+
+                    <h3>Rendering an Element into the DOM</h3>
                     <p>
-                        One might confuse elements with a more widely known concept of “components”.
-                        We will introduce components in the
-                        <span class="adding linkHover fontStyle">next section</span>. Elements are
-                        what components are “made of”, and we encourage you to read this section
-                        before jumping ahead.
+                        Let’s say there is a <span class="highlight">&lt;div&gt;</span> somewhere in
+                        your HTML file:
+                    </p>
+                    <div class="code">
+                        <div class="codePadding">
+                            <span class="syntax">&lt;</span> <span class="div left5">div</span>
+                            <span class="idColor">id</span>
+                            <span class="idName left5"> ="root"</span>
+                            <span class="syntax left5">&gt;&lt;/</span>
+                            <span class="div left5">div</span>
+                            <span class="syntax left5">&gt;</span>
+                        </div>
+                    </div>
+                    <p>
+                        We call this a “root” DOM node because everything inside it will be managed
+                        by React DOM.
+                    </p>
+                    <p>
+                        Applications built with just React usually have a single root DOM node. If
+                        you are integrating React into an existing app, you may have as many
+                        isolated root DOM nodes as you like.
+                    </p>
+                    <p>
+                        To render a React element into a root DOM node, pass both to
+                        <span class="highlight">ReactDOM.render()</span>:
+                    </p>
+                    <div class="code" style="margin-bottom: 25px">
+                        <div class="codePadding">
+                            <p style="margin: 0">
+                                <span class="idColor">const</span>
+                                <span style="color:white">element = </span>
+                                <span class="idName">&lt;</span>
+                                <span class="div left5">h1</span>
+                                <span class="idName left5">&gt;</span>
+                                <span style="color:white" class="left5">Hello, world!</span>
+                                <span class="idName left5">&lt;/</span>
+                                <span class="div left5">h1</span>
+                                <span class="idName left5">&gt;</span>
+                                <span class="idName left5">;</span>
+                            </p>
+
+                            <p style="margin: 0">
+                                <span style="color:white">ReactDOM</span
+                                ><span class="func">.render</span><span class="idName">(</span>
+                                <span class="left5" style="color:white">element</span>
+                                <span class="idName left5">,</span>
+                                <span style="color: white">document</span>
+                                <span class="func left5">.getElementById</span>
+                                <span class="idName left5">('root')</span>
+                                <span class="idName left5">);</span>
+                            </p>
+                        </div>
+                    </div>
+                    <h4 class="adding linkHover fontStyle" style="display: inline;">
+                        Try it on CodePen
+                    </h4>
+
+                    <p>It displays "Hello, world" on the page.</p>
+
+                    <h3>React Only Updates What's Necessary</h3>
+                    <p>
+                        React DOM compares the element and its children to the previous one, and
+                        only applies the DOM updates necessary to bring the DOM to the desired
+                        state.
+                    </p>
+
+                    <p>
+                        You can verify by inspecting the
+                        <span class="adding linkHover fontStyle">last example</span> with the
+                        browser tools:
+                    </p>
+                    <img
+                        src="../assets/img/granular-dom-updates-c158617ed7cc0eac8f58330e49e48224.gif"
+                        alt=""
+                    />
+                    <p>
+                        Even though we create an element describing the whole UI tree on every tick,
+                        only the text node whose contents has changed gets updated by React DOM.
+                    </p>
+                    <p>
+                        In our experience, thinking about how the UI should look at any given moment
+                        rather than how to change it over time eliminates a whole class of bugs.
                     </p>
                 </div>
-
-                <h3>Rendering an Element into the DOM</h3>
-                <p>
-                    Let’s say there is a <span class="highlight">&lt;div&gt;</span> somewhere in
-                    your HTML file:
-                </p>
-                <div class="code">
-                    <div class="codePadding">
-                        <span class="syntax">&lt;</span> <span class="div left5">div</span>
-                        <span class="idColor">id</span>
-                        <span class="idName left5"> ="root"</span>
-                        <span class="syntax left5">&gt;&lt;/</span>
-                        <span class="div left5">div</span>
-                        <span class="syntax left5">&gt;</span>
+                <div id="accesibility">
+                    <h1>Accessibility</h1>
+                    <h3>Why Accessibility?</h3>
+                    <p>
+                        Web accessibility (also referred to as
+                        <span class="adding linkHover fontStyle"><strong>a11y</strong></span
+                        >) is the design and creation of websites that can be used by everyone.
+                        Accessibility support is necessary to allow assistive technology to
+                        interpret web pages.
+                    </p>
+                    <p>
+                        React fully supports building accessible websites, often by using standard
+                        HTML techniques.
+                    </p>
+                    <h3>Standards and Guidelines</h3>
+                    <h3>WCAG</h3>
+                    <p>
+                        The Web Content Accessibility Guidelines provides guidelines for creating
+                        accessible web sites.
+                    </p>
+                    <ul class="wcag">
+                        <li class="adding linkHover fontStyle">WCAG checklist from Wuhcag</li>
+                        <li class="adding linkHover fontStyle">WCAG checklist from WebAIM</li>
+                        <li class="adding linkHover fontStyle">Checklist from The A11Y Project</li>
+                    </ul>
+                    <h3>WAI-ARIA</h3>
+                    <p>
+                        The
+                        <span class="adding linkHover fontStyle"
+                            >Web Accessibility Initiative - Accessible Rich Internet
+                            Applications</span
+                        >
+                        document contains techniques for building fully accessible JavaScript
+                        widgets.
+                    </p>
+                    <p>
+                        Note that all <span class="highlight">aria-*</span> HTML attributes are
+                        fully supported in JSX. Whereas most DOM properties and attributes in React
+                        are camelCased, these attributes should be hyphen-cased (also known as
+                        kebab-case, lisp-case, etc) as they are in plain HTML:
+                    </p>
+                    <div class="code">
+                        <div class="codePadding">
+                            <div style="margin: 0">
+                                <p style="margin: 0">
+                                    <span class="syntax">&lt;</span>
+                                    <span class="div left5">input</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor mgRight">type</span>
+                                    <span class="syntax left5"> ="</span>
+                                    <span class="idName left5">text</span>
+                                    <span class="syntax left5">"</span>
+                                </p>
+                                <p style="margin: 0" class="backColor">
+                                    <span class="idColor mgRight">aria-label</span>
+                                    <span class="syntax left5"> =</span>
+                                    <span class="syntax left5">{</span>
+                                    <span class="div left5">labelText</span>
+                                    <span class="syntax left5">}</span>
+                                </p>
+                                <p style="margin: 0" class="backColor">
+                                    <span class="idColor mgRight">aria-label</span>
+                                    <span class="syntax left5"> ="</span>
+                                    <span class="idName left5">true</span>
+                                    <span class="syntax left5"> "</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor mgRight">onChange</span>
+                                    <span class="syntax left5"> =</span>
+                                    <span class="syntax left5">{</span>
+                                    <span class="div left5">onchangeHandler</span>
+                                    <span class="syntax left5">}</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor mgRight">value</span>
+                                    <span class="syntax left5"> =</span>
+                                    <span class="syntax left5">{</span>
+                                    <span class="div left5">inputValue</span>
+                                    <span class="syntax left5">}</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor mgRight">name</span>
+                                    <span class="syntax left5"> ="</span>
+                                    <span class="idName left5">name</span>
+                                    <span class="syntax left5"> "</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="syntax">/</span>
+                                    <span class="syntax left5">&gt;</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>
-                    We call this a “root” DOM node because everything inside it will be managed by
-                    React DOM.
-                </p>
-                <p>
-                    Applications built with just React usually have a single root DOM node. If you
-                    are integrating React into an existing app, you may have as many isolated root
-                    DOM nodes as you like.
-                </p>
-                <p>
-                    To render a React element into a root DOM node, pass both to
-                    <span class="highlight">ReactDOM.render()</span>:
-                </p>
-                <div class="code" style="margin-bottom: 25px">
-                    <div class="codePadding">
-                        <p style="margin: 0">
-                            <span class="idColor">const</span>
-                            <span style="color:white">element = </span>
-                            <span class="idName">&lt;</span>
-                            <span class="div left5">h1</span>
-                            <span class="idName left5">&gt;</span>
-                            <span style="color:white" class="left5">Hello, world!</span>
-                            <span class="idName left5">&lt;/</span>
-                            <span class="div left5">h1</span>
-                            <span class="idName left5">&gt;</span>
-                            <span class="idName left5">;</span>
-                        </p>
+                <div id="codeSplitting">
+                    <h1>Code-Splitting</h1>
 
-                        <p style="margin: 0">
-                            <span style="color:white">ReactDOM</span
-                            ><span class="func">.render</span><span class="idName">(</span>
-                            <span class="left5" style="color:white">element</span>
-                            <span class="idName left5">,</span>
-                            <span style="color: white">document</span>
-                            <span class="func left5">.getElementById</span>
-                            <span class="idName left5">('root')</span>
-                            <span class="idName left5">);</span>
+                    <h3>Budnling</h3>
+                    <p>
+                        Most React apps will have their files “bundled” using tools like Webpack or
+                        Browserify. Bundling is the process of following imported files and merging
+                        them into a single file: a “bundle”. This bundle can then be included on a
+                        webpage to load an entire app at once.
+                    </p>
+                    <div class="res" style="font-size: 20px">Example</div>
+                    <h3 style="margin: 30px;">App:</h3>
+                    <div class="code" style="margin-bottom: 20px">
+                        <div class="codePadding">
+                            <div style="margin: 0">
+                                <p style="margin: 0">
+                                    <span class="comment left5">// app.js</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor left5">import</span>
+                                    <span class="syntax">{</span>
+                                    <span style="color: white">add</span>
+                                    <span class="syntax">}</span>
+                                    <span class="idColor">from</span>
+                                    <span class="idName">'./math.js';</span>
+                                </p>
+                                <p style="margin-bottom: 0">
+                                    <span class="left5" style="color:white">console</span>
+                                    <span class="syntax left5">.</span>
+                                    <span class="func left5">log</span>
+                                    <span class="syntax left5">(</span>
+                                    <span class="func left5">add</span>
+                                    <span class="syntax left5">(</span>
+                                    <span class="func left5">16</span>
+                                    <span class="syntax left5">,</span>
+                                    <span class="func">26</span>
+                                    <span class="syntax left5">));</span>
+                                    <span class="comment">// 42</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <div class="codePadding">
+                            <div style="margin: 0">
+                                <p style="margin: 0">
+                                    <span class="comment left5">// math.js</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor left5">export function</span>
+                                    <span class="func">add</span>
+                                    <span class="syntax">(</span>
+                                    <span class="left5" style="color: white">a</span>
+                                    <span class="syntax left5">,</span>
+                                    <span style="color: white">b</span>
+                                    <span class="syntax left5">)</span>
+                                    <span class="syntax">{</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor">return</span>
+                                    <span style="color:white">a + b</span>
+                                    <span class="syntax left5">;</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="syntax left5">}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 style="margin: 30px;">Bundle:</h3>
+                    <div class="code">
+                        <div class="codePadding">
+                            <div style="margin: 0">
+                                <p style="margin: 0">
+                                    <span class="idColor left5">function</span>
+                                    <span class="func">add</span>
+                                    <span class="syntax">(</span>
+                                    <span class="left5" style="color: white">a</span>
+                                    <span class="syntax left5">,</span>
+                                    <span style="color: white">b</span>
+                                    <span class="syntax left5">)</span>
+                                    <span class="syntax">{</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor">return</span>
+                                    <span style="color:white">a + b</span>
+                                    <span class="syntax left5">;</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="syntax left5">}</span>
+                                </p>
+                                <p style="margin-bottom: 0">
+                                    <span class="left5" style="color:white">console</span>
+                                    <span class="syntax left5">.</span>
+                                    <span class="func left5">log</span>
+                                    <span class="syntax left5">(</span>
+                                    <span class="func left5">add</span>
+                                    <span class="syntax left5">(</span>
+                                    <span class="func left5">16</span>
+                                    <span class="syntax left5">,</span>
+                                    <span class="func">26</span>
+                                    <span class="syntax left5">));</span>
+                                    <span class="comment">// 42</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tip" style="margin-top: 40px;">
+                        <h3>Note:</h3>
+                        <p>
+                            Your bundles will end up looking a lot different than this.
                         </p>
                     </div>
+                    <p>
+                        If you’re using
+                        <span class="adding linkHover fontStyle">Create React App</span>,
+                        <span class="adding linkHover fontStyle">Next.js</span>,
+                        <span class="adding linkHover fontStyle">Gatsby</span>, or a similar tool,
+                        you will have a Webpack setup out of the box to bundle your app.
+                    </p>
+                    <p>
+                        If you aren’t, you’ll need to setup bundling yourself. For example, see the
+                        <span class="adding linkHover fontStyle">Installation</span> and
+                        <span class="adding linkHover fontStyle">Getting Started</span>guides on the
+                        Webpack docs.
+                    </p>
                 </div>
-                <h4 class="adding linkHover fontStyle" style="display: inline;">
-                    Try it on CodePen
-                </h4>
-
-                <p>It displays "Hello, world" on the page.</p>
-
-                <h3>React Only Updates What's Necessary</h3>
-                <p>
-                    React DOM compares the element and its children to the previous one, and only
-                    applies the DOM updates necessary to bring the DOM to the desired state.
-                </p>
-
-                <p>
-                    You can verify by inspecting the
-                    <span class="adding linkHover fontStyle">last example</span> with the browser
-                    tools:
-                </p>
-                <img
-                    src="../assets/img/granular-dom-updates-c158617ed7cc0eac8f58330e49e48224.gif"
-                    alt=""
-                />
-                <p>
-                    Even though we create an element describing the whole UI tree on every tick,
-                    only the text node whose contents has changed gets updated by React DOM.
-                </p>
-                <p>
-                    In our experience, thinking about how the UI should look at any given moment
-                    rather than how to change it over time eliminates a whole class of bugs.
-                </p>
             </div>
             <div id="navbar">
                 <div class="navItem">
