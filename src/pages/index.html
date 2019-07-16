@@ -9,9 +9,9 @@
     </head>
     <body>
         <div id="container" style="margin-left: 20%">
-            <div id="content">
-                <div id="gettingStarted">
-                    <h1>Getting Started</h1>
+            <main id="main-doc" >
+                <section class="main-section" id="Getting_Started">
+                    <header>Getting Started</header>
                     <p class="res">
                         This page is an overview of the React documentation and related resources.
                     </p>
@@ -48,9 +48,9 @@
                         browser. It does a slow runtime code transformation, so we’d only recommend
                         using this for simple demos.
                     </p>
-                </div>
-                <div id="addReact">
-                    <h1>Add React to a Website</h1>
+                </section>
+                <section class="main-section" id="Add_React_to_a_Website">
+                    <header>Add React to a Website</header>
                     <p class="res">
                         This page is an overview of the React documentation and related resources.
                     </p>
@@ -82,6 +82,7 @@
                         mark the spot where you want to display something with React. For example:
                     </p>
                     <div class="code">
+                        <code></code>
                         <p class="comment">&lt;!-- ... existing HTML ... --&gt;</p>
                         <div class="backColor">
                             <span class="syntax">&lt;</span> <span class="div left5">div</span>
@@ -110,9 +111,9 @@
                             empty — React will replace any existing content inside DOM containers.
                         </p>
                     </div>
-                </div>
-                <div id="createReactApp">
-                    <h1>Create a New React App</h1>
+                </section>
+                <section class="main-section" id="Create_a_New_React_App">
+                    <header>Create a New React App</header>
                     <p class="res">
                         Use an integrated toolchain for the best user and developer experience.
                     </p>
@@ -162,6 +163,7 @@
                         your machine. To create a project, run:
                     </p>
                     <div class="code">
+                            <code></code>
                         <p style="color:white">npx create-react-app my-app</p>
                         <p style="color:white">
                             <span style="color: rgb(121, 182, 242);">cd</span> my-app
@@ -180,13 +182,14 @@
                             >
                         </p>
                     </div>
-                </div>
-                <div id="CDNLinks">
-                    <h1>CDN Links</h1>
+                </section>
+                <section class="main-section" id="CDN_Links">
+                    <header>CDN Links</header>
                     <p class="res">
                         Both React and ReactDOM are available over a CDN.
                     </p>
                     <div class="code" style="padding: 20px">
+                            <code></code>
                         <div style="margin-bottom: 10px">
                             <span class="syntax">&lt;</span><span class="div">script </span>
                             <span class="idColor">crossorigin src</span
@@ -276,6 +279,7 @@
                     </p>
                     <div>
                         <img
+                        id="imgReact"
                             src="../assets/img/cdn-cors-header-89baed0a6540f29e954065ce04661048-dd807.png"
                             alt=""
                         />
@@ -284,15 +288,14 @@
                         This enables a better
                         <span class="linkHover adding">error handling experience</span>
                     </p>
-                </div>
-                <div id="helloWorld">
-                    <h1>
-                        Hello World
-                    </h1>
+                </section>
+                <section class="main-section" id="Hello_World">
+                    <header>Hello World</header>
                     <p class="res">
                         The smallest React example looks like this:
                     </p>
                     <div class="code">
+                            <code></code>
                         <div class="codePadding">
                             <p style="margin: 0">
                                 <span style="color:white">ReactDOM</span
@@ -385,13 +388,14 @@
                             should get you most of the way.
                         </p>
                     </div>
-                </div>
-                <div id="JSX">
-                    <h1>Introducing JSX</h1>
+                </section>
+                <section class="main-section" id="Introducing_JSX">
+                    <header>Introducing JSX</header>
                     <p class="res">
                         Consider this variable declaration:
                     </p>
                     <div class="code">
+                            <code></code>
                         <div class="codePadding">
                             <p style="margin: 0">
                                 <span class="idColor">const</span>
@@ -502,9 +506,9 @@
                         <span class="highlight">formatName(user)</span> are all valid JavaScript
                         expressions.
                     </p>
-                </div>
-                <div id="rendering">
-                    <h1>Rendering Elements</h1>
+                </section>
+                <section class="main-section" id="Rendering_Elements">
+                    <header>Rendering Elements</header>
                     <div class="res">Elements are the smallest building blocks of React apps.</div>
 
                     <p>An element describes what you want to see on the screen:</p>
@@ -625,9 +629,9 @@
                         In our experience, thinking about how the UI should look at any given moment
                         rather than how to change it over time eliminates a whole class of bugs.
                     </p>
-                </div>
-                <div id="accesibility">
-                    <h1>Accessibility</h1>
+                </section>
+                <section class="main-section" id="Accessibility">
+                    <header>Accessibility</header>
                     <h3>Why Accessibility?</h3>
                     <p>
                         Web accessibility (also referred to as
@@ -641,14 +645,14 @@
                         HTML techniques.
                     </p>
                     <h3>Standards and Guidelines</h3>
-                    <h3>listInline</h3>
+                    <h3>WCAG</h3>
                     <p>
                         The Web Content Accessibility Guidelines provides guidelines for creating
                         accessible web sites.
                     </p>
                     <ul class="listInline">
-                        <li class="adding linkHover fontStyle">listInline checklist from Wuhcag</li>
-                        <li class="adding linkHover fontStyle">listInline checklist from WebAIM</li>
+                        <li class="adding linkHover fontStyle">WCAG checklist from Wuhcag</li>
+                        <li class="adding linkHover fontStyle">WCAG checklist from WebAIM</li>
                         <li class="adding linkHover fontStyle">Checklist from The A11Y Project</li>
                     </ul>
                     <h3>WAI-ARIA</h3>
@@ -720,9 +724,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="codeSplitting">
-                    <h1>Code-Splitting</h1>
+                </section>
+                <section class="main-section" id="Code-Splitting">
+                    <header>Code-Splitting</header>
 
                     <h3>Budnling</h3>
                     <p>
@@ -847,9 +851,9 @@
                         <span class="adding linkHover fontStyle">Getting Started</span>guides on the
                         Webpack docs.
                     </p>
-                </div>
-                <div id="react">
-                    <h1>React Top-Level API</h1>
+                </section>
+                <section class="main-section" id="React_Top-Level_API">
+                    <header>React Top-Level API</header>
                     <p>
                         <span class="highlight">React</span> is the entry point to the React
                         library. If you load React from a
@@ -993,279 +997,282 @@
                         for a list of methods and properties related to the base
                         <span class="highlight">React.Component </span>class.
                     </p>
-                </div>
-            </div>
-            <div id="navbar">
-                <div class="navItem">
-                    <ul>
-                        <li class="title">INSTALLATION</li>
-                    </ul>
-                    <div class="hide">
-                        <ol>
-                            <a href="#gettingStarted">
-                                <li>Getting Started *</li>
-                            </a>
-                            <a href="#addReact">
-                                <li>Add React to a Website *</li>
-                            </a>
-                            <a href="#createReactApp">
-                                <li>Create a new React App *</li>
-                            </a>
-                            <a href="#CDNLinks">
-                                <li>CDN Links *</li>
-                            </a>
-                        </ol>
+                </section>
+            </main>
+            <nav id="navbar">
+                <header></header>
+                <div id="contentNav">
+                    <div class="navItem">
+                        <ul>
+                            <li class="title">INSTALLATION</li>
+                        </ul>
+                        <div class="hide">
+                            <ol>
+                                <a class="nav-link" href="#Getting_Started">
+                                    <li>Getting Started</li>
+                                </a>
+                                <a class="nav-link" href="#Add_React_to_a_Website">
+                                    <li>Add React to a Website</li>
+                                </a>
+                                <a class="nav-link" href="#Create_a_New_React_App">
+                                    <li>Create a new React App</li>
+                                </a>
+                                <a class="nav-link" href="#CDN_Links">
+                                    <li>CDN Links</li>
+                                </a>
+                            </ol>
+                        </div>
                     </div>
-                </div>
-                <div class="navItem">
-                    <ul>
-                        <li class="title">MAIN CONCEPTS</li>
-                    </ul>
-                    <div class="hide">
-                        <ol>
-                            <a href="#helloWorld">
-                                <li>Hello World *</li>
-                            </a>
-                            <a href="#JSX">
-                                <li>Introducing JSX *</li>
-                            </a>
-                            <a href="#rendering">
-                                <li>Rendering Elements *</li>
-                            </a>
-                            <a href="">
-                                <li>Components and Props</li>
-                            </a>
-                            <a href="">
-                                <li>State and Lifecycle</li>
-                            </a>
-                            <a href="">
-                                <li>Handling Events</li>
-                            </a>
-                            <a href="">
-                                <li>Conditional Rendering</li>
-                            </a>
-                            <a href="">
-                                <li>Lists and Keys</li>
-                            </a>
-                            <a href="">
-                                <li>Forms</li>
-                            </a>
-                            <a href="">
-                                <li>Lifting State Up</li>
-                            </a>
-                            <a href="">
-                                <li>Composition vs Inheritance</li>
-                            </a>
-                            <a href="">
-                                <li>Thinking in React</li>
-                            </a>
-                        </ol>
+                    <div class="navItem">
+                        <ul>
+                            <li class="title">MAIN CONCEPTS</li>
+                        </ul>
+                        <div class="hide">
+                            <ol>
+                                <a class="nav-link" href="#Hello_World">
+                                    <li>Hello World</li>
+                                </a>
+                                <a class="nav-link" href="#Introducing_JSX">
+                                    <li>Introducing JSX</li>
+                                </a>
+                                <a class="nav-link" href="#Rendering_Elements">
+                                    <li>Rendering Elements</li>
+                                </a>
+                                <a href="">
+                                    <li>Components and Props</li>
+                                </a>
+                                <a href="">
+                                    <li>State and Lifecycle</li>
+                                </a>
+                                <a href="">
+                                    <li>Handling Events</li>
+                                </a>
+                                <a href="">
+                                    <li>Conditional Rendering</li>
+                                </a>
+                                <a href="">
+                                    <li>Lists and Keys</li>
+                                </a>
+                                <a href="">
+                                    <li>Forms</li>
+                                </a>
+                                <a href="">
+                                    <li>Lifting State Up</li>
+                                </a>
+                                <a href="">
+                                    <li>Composition vs Inheritance</li>
+                                </a>
+                                <a href="">
+                                    <li>Thinking in React</li>
+                                </a>
+                            </ol>
+                        </div>
                     </div>
-                </div>
-                <div class="navItem">
-                    <ul>
-                        <li class="title">ADVANCED GUIDES</li>
-                    </ul>
-                    <div class="hide">
-                        <ol>
-                            <a href="#accesibility">
-                                <li>Accessibility *</li>
-                            </a>
-                            <a href="#codeSplitting">
-                                <li>Code-Splitting *</li>
-                            </a>
-                            <a href="">
-                                <li>Error Boundaries</li>
-                            </a>
-                            <a href="">
-                                <li>Forwarding Refs</li>
-                            </a>
-                            <a href="">
-                                <li>Fragments</li>
-                            </a>
-                            <a href="">
-                                <li>Higher-Order Components</li>
-                            </a>
-                            <a href="">
-                                <li>Integrating with Other Libraries</li>
-                            </a>
-                            <a href="">
-                                <li>Integrating with Other Libraries</li>
-                            </a>
-                            <a href="">
-                                <li>JSX In Depth</li>
-                            </a>
-                            <a href="">
-                                <li>Optimizing Performance</li>
-                            </a>
-                            <a href="">
-                                <li>Portals</li>
-                            </a>
-                            <a href="">
-                                <li>React Without ES6</li>
-                            </a>
-                            <a href="">
-                                <li>React Without JSX</li>
-                            </a>
-                            <a href="">
-                                <li>Reconciliation</li>
-                            </a>
-                            <a href="">
-                                <li>Refs and the DOM</li>
-                            </a>
+                    <div class="navItem">
+                        <ul>
+                            <li class="title">ADVANCED GUIDES</li>
+                        </ul>
+                        <div class="hide">
+                            <ol>
+                                <a class="nav-link" href="#Accessibility">
+                                    <li>Accessibility</li>
+                                </a>
+                                <a class="nav-link" href="#Code-Splitting">
+                                    <li>Code-Splitting</li>
+                                </a>
+                                <a href="">
+                                    <li>Error Boundaries</li>
+                                </a>
+                                <a href="">
+                                    <li>Forwarding Refs</li>
+                                </a>
+                                <a href="">
+                                    <li>Fragments</li>
+                                </a>
+                                <a href="">
+                                    <li>Higher-Order Components</li>
+                                </a>
+                                <a href="">
+                                    <li>Integrating with Other Libraries</li>
+                                </a>
+                                <a href="">
+                                    <li>Integrating with Other Libraries</li>
+                                </a>
+                                <a href="">
+                                    <li>JSX In Depth</li>
+                                </a>
+                                <a href="">
+                                    <li>Optimizing Performance</li>
+                                </a>
+                                <a href="">
+                                    <li>Portals</li>
+                                </a>
+                                <a href="">
+                                    <li>React Without ES6</li>
+                                </a>
+                                <a href="">
+                                    <li>React Without JSX</li>
+                                </a>
+                                <a href="">
+                                    <li>Reconciliation</li>
+                                </a>
+                                <a href="">
+                                    <li>Refs and the DOM</li>
+                                </a>
 
-                            <a href="">
-                                <li>Render Props</li>
-                            </a>
+                                <a href="">
+                                    <li>Render Props</li>
+                                </a>
 
-                            <a href="">
-                                <li>Static Type Checking</li>
-                            </a>
+                                <a href="">
+                                    <li>Static Type Checking</li>
+                                </a>
 
-                            <a href="">
-                                <li>Strict Mode</li>
-                            </a>
-                            <a href="">
-                                <li>Typechecking With PropTypes</li>
-                            </a>
-                            <a href="">
-                                <li>Uncotrolled Components</li>
-                            </a>
-                            <a href="">
-                                <li>Web Components</li>
-                            </a>
-                        </ol>
+                                <a href="">
+                                    <li>Strict Mode</li>
+                                </a>
+                                <a href="">
+                                    <li>Typechecking With PropTypes</li>
+                                </a>
+                                <a href="">
+                                    <li>Uncotrolled Components</li>
+                                </a>
+                                <a href="">
+                                    <li>Web Components</li>
+                                </a>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="navItem">
+                        <ul>
+                            <li class="title">API REFERENCE</li>
+                        </ul>
+                        <div class="hide">
+                            <ol>
+                                <a class="nav-link" href="#React_Top-Level_API">
+                                    <li>React Top-Level API</li>
+                                </a>
+                                <a href="">
+                                    <li>ReactDOM</li>
+                                </a>
+                                <a href="">
+                                    <li>ReactDOMServer</li>
+                                </a>
+                                <a href="">
+                                    <li>DOM Elements</li>
+                                </a>
+                                <a href="">
+                                    <li>SyntheticEvent</li>
+                                </a>
+                                <a href="">
+                                    <li>Test Utilities</li>
+                                </a>
+                                <a href="">
+                                    <li>Shallow Renderer</li>
+                                </a>
+                                <a href="">
+                                    <li>Test Renderer</li>
+                                </a>
+                                <a href="">
+                                    <li>JS Environment Requirements</li>
+                                </a>
+                                <a href="">
+                                    <li>Glossary</li>
+                                </a>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="navItem" id="hooks">
+                        <ul>
+                            <li class="title">HOOKS (NEW)</li>
+                        </ul>
+                        <div class="hide">
+                            <ol>
+                                <a href="">
+                                    <li>Introducint Hooks</li>
+                                </a>
+                                <a href="">
+                                    <li>Hooks at a Glance</li>
+                                </a>
+                                <a href="">
+                                    <li>Using the State Hook</li>
+                                </a>
+                                <a href="">
+                                    <li>Using the Effect Hook</li>
+                                </a>
+                                <a href="">
+                                    <li>Rules of Hooks</li>
+                                </a>
+                                <a href="">
+                                    <li>Building Your Own Hooks</li>
+                                </a>
+                                <a href="">
+                                    <li>Hooks API Reference</li>
+                                </a>
+                                <a href="">
+                                    <li>Hooks FAQ</li>
+                                </a>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="navItem" id="contributing">
+                        <ul>
+                            <li class="title">CONTRIBUTING</li>
+                        </ul>
+                        <div class="hide">
+                            <ol>
+                                <a href="">
+                                    <li>How to Contribute</li>
+                                </a>
+                                <a href="">
+                                    <li>Codebase Overview</li>
+                                </a>
+                                <a href="">
+                                    <li>Implementation Notes</li>
+                                </a>
+                                <a href="">
+                                    <li>Design Principles</li>
+                                </a>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="navItem" id="FAQ">
+                        <ul>
+                            <li class="title">FAQ</li>
+                        </ul>
+                        <div class="hide">
+                            <ol>
+                                <a href="">
+                                    <li>AJAX and APIs</li>
+                                </a>
+                                <a href="">
+                                    <li>Babel, JSX, and Build Steps</li>
+                                </a>
+                                <a href="">
+                                    <li>Passing Functions to Components</li>
+                                </a>
+                                <a href="">
+                                    <li>Component State</li>
+                                </a>
+                                <a href="">
+                                    <li>Styling and CSS</li>
+                                </a>
+                                <a href="">
+                                    <li>File Structure</li>
+                                </a>
+                                <a href="">
+                                    <li>Versioning Policy</li>
+                                </a>
+                                <a href="">
+                                    <li>Virtual DOM and Internals</li>
+                                </a>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="navItem">
-                    <ul>
-                        <li class="title">API REFERENCE</li>
-                    </ul>
-                    <div class="hide">
-                        <ol>
-                            <a href="#react">
-                                <li>React *</li>
-                            </a>
-                            <a href="">
-                                <li>ReactDOM</li>
-                            </a>
-                            <a href="">
-                                <li>ReactDOMServer</li>
-                            </a>
-                            <a href="">
-                                <li>DOM Elements</li>
-                            </a>
-                            <a href="">
-                                <li>SyntheticEvent</li>
-                            </a>
-                            <a href="">
-                                <li>Test Utilities</li>
-                            </a>
-                            <a href="">
-                                <li>Shallow Renderer</li>
-                            </a>
-                            <a href="">
-                                <li>Test Renderer</li>
-                            </a>
-                            <a href="">
-                                <li>JS Environment Requirements</li>
-                            </a>
-                            <a href="">
-                                <li>Glossary</li>
-                            </a>
-                        </ol>
-                    </div>
-                </div>
-                <div class="navItem" id="hooks">
-                    <ul>
-                        <li class="title">HOOKS (NEW)</li>
-                    </ul>
-                    <div class="hide">
-                        <ol>
-                            <a href="">
-                                <li>Introducint Hooks</li>
-                            </a>
-                            <a href="">
-                                <li>Hooks at a Glance</li>
-                            </a>
-                            <a href="">
-                                <li>Using the State Hook</li>
-                            </a>
-                            <a href="">
-                                <li>Using the Effect Hook</li>
-                            </a>
-                            <a href="">
-                                <li>Rules of Hooks</li>
-                            </a>
-                            <a href="">
-                                <li>Building Your Own Hooks</li>
-                            </a>
-                            <a href="">
-                                <li>Hooks API Reference</li>
-                            </a>
-                            <a href="">
-                                <li>Hooks FAQ</li>
-                            </a>
-                        </ol>
-                    </div>
-                </div>
-                <div class="navItem" id="contributing">
-                    <ul>
-                        <li class="title">CONTRIBUTING</li>
-                    </ul>
-                    <div class="hide">
-                        <ol>
-                            <a href="">
-                                <li>How to Contribute</li>
-                            </a>
-                            <a href="">
-                                <li>Codebase Overview</li>
-                            </a>
-                            <a href="">
-                                <li>Implementation Notes</li>
-                            </a>
-                            <a href="">
-                                <li>Design Principles</li>
-                            </a>
-                        </ol>
-                    </div>
-                </div>
-                <div class="navItem" id="FAQ">
-                    <ul>
-                        <li class="title">FAQ</li>
-                    </ul>
-                    <div class="hide">
-                        <ol>
-                            <a href="">
-                                <li>AJAX and APIs</li>
-                            </a>
-                            <a href="">
-                                <li>Babel, JSX, and Build Steps</li>
-                            </a>
-                            <a href="">
-                                <li>Passing Functions to Components</li>
-                            </a>
-                            <a href="">
-                                <li>Component State</li>
-                            </a>
-                            <a href="">
-                                <li>Styling and CSS</li>
-                            </a>
-                            <a href="">
-                                <li>File Structure</li>
-                            </a>
-                            <a href="">
-                                <li>Versioning Policy</li>
-                            </a>
-                            <a href="">
-                                <li>Virtual DOM and Internals</li>
-                            </a>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+            </nav>
         </div>
-
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <script src="../js/script.js"></script>
     </body>
 </html>

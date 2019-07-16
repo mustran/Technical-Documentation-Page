@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-::selection{
+::selection {
     background: rgba(187, 239, 253, 0.7);
 }
 
@@ -22,7 +22,7 @@ ul {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
@@ -33,14 +33,18 @@ a{
     grid-template-columns: 3fr 1fr;
 }
 
+#main-doc {
+    margin-left: 85px;
+}
+
 #navbar {
     /* width: 350px; */
     position: fixed;
     overflow: hidden;
-    width: 20%;
+    width: 23%;
     text-align: center;
-    margin-left: 10px;
-    right: 0;
+    /* margin-left: 10px; */
+    left: 0;
     background-color: rgba(22, 127, 141, 0.2) !important;
 }
 
@@ -92,8 +96,8 @@ a{
     padding: 15px;
 }
 
-.component{
-    color: rgb(250, 200, 99);;
+.component {
+    color: rgb(250, 200, 99);
 }
 
 .idColor {
@@ -121,11 +125,12 @@ a{
     padding: 12px;
 }
 
-h1 {
+header {
     font-size: 45px;
+    font-weight: bold;
 }
 
-p{
+p {
     line-height: 25px;
 }
 
@@ -177,7 +182,7 @@ p{
     font-size: 24px;
 }
 
-.hide{
+.hide {
     /* background: green; */
     display: none;
 }
@@ -189,13 +194,13 @@ p{
     color: white;
 }
 
-.show > ol > a{
+.show > ol > a {
     /* color: white; */
     /* font-weight: bold; */
     font-size: 20px;
 }
 
-.show > ol > a:hover{
+.show > ol > a:hover {
     /* color: white; */
     font-weight: bold;
     /* font-size: 21px; */
@@ -227,5 +232,22 @@ p{
         width: 100%;
         text-align: center;
         position: relative;
+        margin-left: 0px !important;
+    }
+    #contentNav {
+        height: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: 1px solid rgba(13, 77, 97, 0.7);
+    }
+
+    #main-doc {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 376px) {
+    #imgReact {
+        width: 250px;
     }
 }
