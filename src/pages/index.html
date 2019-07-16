@@ -641,14 +641,14 @@
                         HTML techniques.
                     </p>
                     <h3>Standards and Guidelines</h3>
-                    <h3>WCAG</h3>
+                    <h3>listInline</h3>
                     <p>
                         The Web Content Accessibility Guidelines provides guidelines for creating
                         accessible web sites.
                     </p>
-                    <ul class="wcag">
-                        <li class="adding linkHover fontStyle">WCAG checklist from Wuhcag</li>
-                        <li class="adding linkHover fontStyle">WCAG checklist from WebAIM</li>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">listInline checklist from Wuhcag</li>
+                        <li class="adding linkHover fontStyle">listInline checklist from WebAIM</li>
                         <li class="adding linkHover fontStyle">Checklist from The A11Y Project</li>
                     </ul>
                     <h3>WAI-ARIA</h3>
@@ -846,6 +846,152 @@
                         <span class="adding linkHover fontStyle">Installation</span> and
                         <span class="adding linkHover fontStyle">Getting Started</span>guides on the
                         Webpack docs.
+                    </p>
+                </div>
+                <div id="react">
+                    <h1>React Top-Level API</h1>
+                    <p>
+                        <span class="highlight">React</span> is the entry point to the React
+                        library. If you load React from a
+                        <span class="highlight">&lt;script&gt;</span> tag, these top-level APIs are
+                        available on the <span class="highlight">React</span>global. If you use ES6
+                        with npm, you can write
+                        <span class="highlight">import React from 'react'</span>. If you use ES5
+                        with npm, you can write
+                        <span class="highlight">var React = require('react')</span>.
+                    </p>
+                    <h2>Overview</h2>
+                    <h3>Components</h3>
+                    <p>
+                        React components let you split the UI into independent, reusable pieces, and
+                        think about each piece in isolation. React components can be defined by
+                        subclassing <span class="highlight">React.Component</span> or
+                        <span class="highlight">React.PureComponent</span>.
+                    </p>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">React.Component</li>
+                        <li class="adding linkHover fontStyle">React.PureComponent</li>
+                    </ul>
+                    <p>
+                        If you don’t use ES6 classes, you may use the
+                        <span class="highlight">create-react-class</span> module instead. See
+                        <span class="adding linkHover fontStyle">Using React without ES6</span> for
+                        more information.
+                    </p>
+                    <p>
+                        React components can also be defined as functions which can be wrapped:
+                    </p>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">React.memo</li>
+                    </ul>
+                    <h3>Creating React Elements</h3>
+                    <p>
+                        We recommend <span class="adding linkHover fontStyle">Using JSX</span> to
+                        describe what your UI should look like. Each JSX element is just syntactic
+                        sugar for calling
+                        <span class="adding linkHover fontStyle">React.createElement()</span>. You
+                        will not typically invoke the following methods directly if you are using
+                        JSX.
+                    </p>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">createElement( )</li>
+                        <li class="adding linkHover fontStyle">createFactory( )</li>
+                    </ul>
+                    <p>
+                        See
+                        <span class="adding linkHover fontStyle">Using React without JSX</span> for
+                        more information.
+                    </p>
+                    <h3>Transforming Elements</h3>
+                    <p>
+                        <span class="highlight">React</span> provides several APIs for manipulating
+                        elements:
+                    </p>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">cloneElement( )</li>
+                        <li class="adding linkHover fontStyle">isValidElement( )</li>
+                        <li class="adding linkHover fontStyle">React.Children</li>
+                    </ul>
+                    <h3>Fragments</h3>
+                    <p>
+                        <span class="highlight">React</span> also provides a component for rendering
+                        multiple elements without a wrapper.
+                    </p>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">React.Fragment</li>
+                    </ul>
+                    <h3>Refs</h3>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">React.createRef</li>
+                        <li class="adding linkHover fontStyle">React.forwardRef</li>
+                    </ul>
+                    <h3>Suspense</h3>
+                    <p>
+                        Suspense lets components “wait” for something before rendering. Today,
+                        Suspense only supports one use case:
+                        <span class="adding linkHover fontStyle"
+                            >loading components dynamically with React.lazy</span
+                        >. In the future, it will support other use cases like data fetching.
+                    </p>
+                    <ul class="listInline">
+                        <li class="adding linkHover fontStyle">React.lazy</li>
+                        <li class="adding linkHover fontStyle">React.Suspense</li>
+                    </ul>
+                    <h2 style="margin-top: 30px;">Reference</h2>
+                    <h3>React.Component</h3>
+                    <p>
+                        <span class="highlight">React.Component</span> is the base class for React
+                        components when they are defined using
+                        <span class="adding linkHover fontStyle">ES6 classes</span>:
+                    </p>
+                    <div class="code" style="margin-bottom: 20px">
+                        <div class="codePadding">
+                            <div style="margin: 0">
+                                <p style="margin: 0">
+                                    <span class="idColor left5">class</span>
+                                    <span class="component">Greeting</span>
+                                    <span class="idColor">extends</span>
+                                    <span class="component">React.Component</span>
+                                    <span class="syntax">{</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="func">render</span>
+                                    <span class="syntax">() {</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="idColor right5">return</span>
+                                    <span class="idName">&lt;</span>
+                                    <span class="div left5">h1</span>
+                                    <span class="idName left5">&gt;</span>
+                                    <span style="color:white" class="left5">Hello, </span>
+                                    <span class="syntax">{</span>
+                                    <span class="idColor left5">this</span>
+                                    <span class="syntax left5">.</span>
+                                    <span style="color: white" class="left5">props</span>
+                                    <span class="syntax left5">.</span>
+                                    <span style="color: white" class="left5">name</span>
+                                    <span class="syntax left5">}</span>
+                                    <span class="idName left5">&lt;/</span>
+                                    <span class="div left5">h1</span>
+                                    <span class="idName left5">&gt;</span>
+                                    <span class="idName left5">;</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="syntax right5">}</span>
+                                </p>
+                                <p style="margin: 0">
+                                    <span class="syntax">}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        See the
+                        <span class="adding linkHover fontStyle"
+                            >React.Component API Reference</span
+                        >
+                        for a list of methods and properties related to the base
+                        <span class="highlight">React.Component </span>class.
                     </p>
                 </div>
             </div>
